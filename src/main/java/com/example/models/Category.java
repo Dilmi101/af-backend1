@@ -1,5 +1,7 @@
 package com.example.models;
 
+import java.math.BigDecimal;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -11,9 +13,9 @@ public class Category {
 	
 	private String categoryName;
 	
-	private double price;
+	private BigDecimal price;
 
-	public Category(String id, String categoryName, double price) {
+	public Category(String id, String categoryName, BigDecimal price) {
 		super();
 		this.id = id;
 		this.categoryName = categoryName;
@@ -24,11 +26,11 @@ public class Category {
 		super();
 	}
 
-	public double getPrice() {
+	public BigDecimal getPrice() {
 		return price;
 	}
 
-	public void setPrice(double price) {
+	public void setPrice(BigDecimal price) {
 		this.price = price;
 	}
 
